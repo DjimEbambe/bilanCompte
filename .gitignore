@@ -1,3 +1,48 @@
 # created by virtualenv automatically
 bin/
 lib/
+
+# Fichiers générés par Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+media/
+
+# Environnement virtuel
+venv/
+*.pyc
+
+# Fichiers de configuration
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+*.log
+
+# Fichiers de sauvegarde et temporaires
+*~
+*.swp
+.DS_Store
+
+# Dossiers générés par l'IDE
+.idea/
+
+# Fichiers spécifiques à VSCode
+.vscode/
+
+# Fichiers de configuration pour pyCharm
+.idea/
+
+# Cache Django
+__pycache__/
+.cach*
+.cache/
+
+# Fichiers de sauvegarde
+*.bak
+
+# Fichiers de l'environnement
+.env

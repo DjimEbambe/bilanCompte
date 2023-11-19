@@ -1,0 +1,87 @@
+{% extends "base.html" %}
+
+{% block script %}
+
+<script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/jquery-3.6.0.min.js"></script>
+<script src="../js/datatables.min.js"></script>
+<script src="../js/pdfmake.min.js"></script>
+<script src="../js/vfs_fonts.js"></script>
+<script src="../js/custom.js"></script>
+
+{% endblock %}
+
+{% block content %}
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<link rel="stylesheet" href="../datatables.min.css">
+<link rel="stylesheet" href="../style.css">
+
+<header class="header_part">
+    <img src="data:image/jpeg;base64,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EQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQERED/9k=" alt="" class="img-fluid">
+    <h4>Tableau comptable de la Société Auto Repair Congo du 1er janvier 2022 au 31 décembre 2022</h4>
+</header>
+<!-- =======  Data-Table  = Start  ========================== -->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="data_table">
+                <table id="example" class="table table-striped table-bordered">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>N°</th>
+                            <th>Compte OHADA</th>
+                            <th>Intitulé des comptes</th>
+                            <th class="text-center">xx</th>
+                            <th class="text-center">yy</th>
+                            <th class="text-center">Réf</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>1011 01 00001</td>
+                            <td>Capital souscrit, non appele otshudi</td>
+                            <td></td>
+                            <td></td>
+                            <td>CA</td>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>1011 01 00001</td>
+                            <td>Capital souscrit, non appele otshudi</td>
+                            <td></td>
+                            <td></td>
+                            <td>CA</td>
+                        </tr>
+
+                        <tr>
+                            <td>1</td>
+                            <td>1011 01 00001</td>
+                            <td>Capital souscrit, non appele otshudi</td>
+                            <td></td>
+                            <td></td>
+                            <td>CA</td>
+                        </tr>
+                        
+                          
+                    </tbody>
+                </table>
+
+                <p id="footer" class="text-center">EMS (Entreprise Management Solutions) - Copyright &copy; 2023 Sté ARC - Etats Financiers - 2022</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- =======  Data-Table  = End  ===================== -->
+<!-- ============ Java Script Files  ================== -->
+
+
+
+
+
+
+
+
+{% endblock content %}

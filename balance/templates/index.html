@@ -1,64 +1,77 @@
 {% extends "base.html" %}
-
 {% block content %}
-    <div class="p-1  rounded-3 text-center">
-        <div class="m-4">
-            <h1 class="display-5 fw-bold">Les journaux</h1>
-            <form action="/" method="post" enctype="multipart/form-data">
-                {% csrf_token %}
-                {{ form.category }}
-                {{ form.excel_file }}
-                <button class="btn btn-outline-secondary" type="submit">Ajouter</button>
-            </form>
-        </div>
-    </div>
+
+<link href="../styles.css" rel="stylesheet">
+  <!-- Page Content-->
+  <section class="pt-4">
+    <style>
+      a {text-decoration: none;}
+    </style>
+
     <div class="container px-lg-5">
-        <table class="table">
-          <thead>
-            <tr>
-              <th scope="col">#</th>
-              <th scope="col">Date</th>
-              <th scope="col">Entrée</th>
-              <th scope="col"></th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>
-                  <div class="d-inline-flex gap-1">
-                      <a href="#" class="btn btn-primary" role="button" >Modifier</a>
-                      <a href="#" class="btn btn-primary" role="button" >Supprimer</a>
-                  </div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>
-                  <div class="d-inline-flex gap-1">
-                      <a href="#" class="btn btn-primary" role="button" >Modifier</a>
-                      <a href="#" class="btn btn-primary" role="button" >Supprimer</a>
-                  </div>
-              </td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td>Larry the Bird</td>
-              <td>@twitter</td>
-              <td>
-                  <div class="d-inline-flex gap-1">
-                      <a href="#" class="btn btn-primary" role="button" >Modifier</a>
-                      <a href="#" class="btn btn-primary" role="button" >Supprimer</a>
-                  </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+        <!-- Page Features-->
+        <div class="row gx-lg-5">
+            
+            <div class="col-lg-6 col-xxl-4 mb-5">
+                <a href="journeaux.html">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-collection"></i></div>
+                        <h2 class="fs-4 fw-bold">Journaux</h2>
+                        <p class="mb-0">Banques, Ventes, Achats, Caisses et Opérations diverses</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+            
+            <div class="col-lg-6 col-xxl-4 mb-5">
+                <a href="balance.html">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-cloud-download"></i></div>
+                        <h2 class="fs-4 fw-bold">Balance générale des comptes</h2>
+                        <!--<p class="mb-0">As always, Start Bootstrap has a powerful collectin of free templates.</p> -->
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <div class="col-lg-6 col-xxl-4 mb-5">
+                <a href="bilan.html">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-card-heading"></i></div>
+                        <h2 class="fs-4 fw-bold">Bilan</h2>
+                        <p class="mb-0">Actifs et Passifs</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <div class="col-lg-6 col-xxl-6 mb-5">
+                <a href="compta.html">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-bootstrap"></i></div>
+                        <h2 class="fs-4 fw-bold">Compta</h2>
+                        <p class="mb-0">Charges et Produits</p>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            <div class="col-lg-6 col-xxl-6 mb-5">
+                <a href="TFT.html">
+                <div class="card bg-light border-0 h-100">
+                    <div class="card-body text-center p-4 p-lg-5 pt-0 pt-lg-0">
+                        <div class="feature bg-primary bg-gradient text-white rounded-3 mb-4 mt-n4"><i class="bi bi-code"></i></div>
+                        <h2 class="fs-4 fw-bold">Tableau des fruits de trésorerie</h2>
+                        <!-- <p class="mb-0">We keep our dependencies up to date and squash bugs as they come!</p> -->
+                    </div>
+                </div>
+                </a>
+            </div> 
+        </div> 
     </div>
 
-    <h1 class="text-center"><a href="#" class="btn btn-primary m-3" role="button" >Générer une balance</a></h1>
 {% endblock content %}

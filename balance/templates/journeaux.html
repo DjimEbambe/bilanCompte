@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="p-1  rounded-3 text-center">
+        <div class="m-4">
+            <h1 class="display-5 fw-bold">Les journaux</h1>
+            <form action="/" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.category }}
+                {{ form.excel_file }}
+                <button class="btn btn-outline-secondary" type="submit">Ajouter</button>
+            </form>
+        </div>
+    </div>
+    <div class="container px-lg-5">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Date</th>
+              <th scope="col">Entrée</th>
+              <th scope="col"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>
+                  <div class="d-inline-flex gap-1">
+                      <a href="#" class="btn btn-primary" role="button" >Modifier</a>
+                      <a href="#" class="btn btn-primary" role="button" >Supprimer</a>
+                  </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>Jacob</td>
+              <td>Thornton</td>
+              <td>
+                  <div class="d-inline-flex gap-1">
+                      <a href="#" class="btn btn-primary" role="button" >Modifier</a>
+                      <a href="#" class="btn btn-primary" role="button" >Supprimer</a>
+                  </div>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>Larry the Bird</td>
+              <td>@twitter</td>
+              <td>
+                  <div class="d-inline-flex gap-1">
+                      <a href="#" class="btn btn-primary" role="button" >Modifier</a>
+                      <a href="#" class="btn btn-primary" role="button" >Supprimer</a>
+                  </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+    </div>
+
+    <h1 class="text-center"><a href="#" class="btn btn-primary m-3" role="button" >Générer une balance</a></h1>
+{% endblock content %}

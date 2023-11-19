@@ -4,9 +4,10 @@ from django import forms
 
 class Form(forms.Form):
     CATEGORY_CHOICES = [
-        ('option1', 'Option 1'),
-        ('option2', 'Option 2'),
-        # Add other choices as needed
+        ('1', 'banque'),
+        ('2', 'caisse'),
+        ('3', 'OD'),
+        ('4', 'Vente'),
     ]
 
     category = forms.ChoiceField(choices=CATEGORY_CHOICES)
